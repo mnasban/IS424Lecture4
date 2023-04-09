@@ -4,10 +4,7 @@ from django.http import HttpResponse
  # Create your views here.
 
 def index(request):
-     return HttpResponse("Alsalam Alikum, world!")
+     return render(request, "LectureApp/index.html")
 
-def saad(request):
-     return HttpResponse("Alsalam Alikum, Saad!")
-
-def fahad(request):
-     return HttpResponse("Alsalam Alikum, Fahad!")
+def greet(request,name):
+     return HttpResponse(f"Alsalam Alikum, {name.capitalize()}!")

@@ -6,8 +6,6 @@ from django.http import HttpResponseRedirect
 
 class NewTaskForm(forms.Form):
      task=forms.CharField(label="New Task")
-     email=forms.EmailField()
-     doneField=forms.BooleanField(required=False)
      date=forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}))
 
 #tasks=["task 1","task 2","task 3"]
@@ -27,6 +25,7 @@ def add(request):
 
           if form.is_valid():
                task=form.cleaned_data["task"]
+               task+=form.cleaned_data["date"].strftime("%m/%d/%Y, %H:%M:%S")
                request.session["tasks"]+=[task]
 
                return HttpResponseRedirect(reverse("tasks:index"))

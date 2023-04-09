@@ -1,3 +1,4 @@
+import datetime 
 from django.shortcuts import render
 from django import forms
 from django.urls import reverse
@@ -5,6 +6,9 @@ from django.http import HttpResponseRedirect
 
 class NewTaskForm(forms.Form):
      task=forms.CharField(label="New Task")
+     email=forms.EmailField()
+     doneField=forms.BooleanField(required=False)
+     date=forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}))
 
 #tasks=["task 1","task 2","task 3"]
 

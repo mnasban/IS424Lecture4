@@ -2,5 +2,27 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
     text-align: center;
-    color:chocolate;
+    color:rgb(196, 99, 30);
+    margin: 20px;
+    padding: 20px;
 }
+.ListItem{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    text-align: left;
+    color:chocolate;
+    margin: 5px;
+    padding-left: 20px;
+}
+
+.button , input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+ /*   font-weight: bold; */
+    text-align: left;
+    color:white;
+    background-color: chocolate;
+    margin: 40px;
+    padding: 10px;
+  }
+  

@@ -7,6 +7,7 @@ from django.http import HttpResponseRedirect
 class NewTaskForm(forms.Form):
      task=forms.CharField(label="New Task")
      date=forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}))
+     priority=forms.IntegerField(label="Priority",min_value=1,max_value=10)
 
 #tasks=["task 1","task 2","task 3"]
 
